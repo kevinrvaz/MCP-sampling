@@ -1,0 +1,16 @@
+{
+	"servers": {
+		"sampling-demo-1": {
+			"type": "stdio",
+			"command": "uv",
+			"args": [
+                "run",
+				"sampling_server.py"
+			],
+			"env": {
+				"TAVILY_API_KEY": "your-api-key"
+			}
+		}
+	},
+	"inputs": []
+}

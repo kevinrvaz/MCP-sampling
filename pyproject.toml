@@ -1,0 +1,18 @@
+[project]
+name = "mcp-sampling-demo"
+version = "0.1.0"
+description = "Sampling TUI for demoing MCP Sampling internals"
+authors = [{ name = "Kevin Rohan Vaz", email = "excalibur.krv@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=3.4.0",
+    "openai>=2.41.0",
+    "pypdf>=6.12.2",
+    "rich>=15.0.0",
+    "tavily-python>=0.7.25",
+    "textual>=3.0.0",
+]
+
+[dependency-groups]
+dev = ["mypy>=2.1.0"]

@@ -28,7 +28,6 @@ The MCP server (`sampling_server.py`) exposes four tools:
 | Tool             | Trigger                                | Description                             |
 | ---------------- | -------------------------------------- | --------------------------------------- |
 | `research_agent` | any plain text query                   | Web research via Tavily + LLM synthesis |
-| `generate_code`  | `code: <concept>`                      | Generate a Python code example          |
 | `summarize_pdf`  | query containing `.pdf`                | Summarize a PDF file at the given path  |
 | `calculator`     | `/use calculator {"expression":"..."}` | Evaluate an arithmetic expression       |
 

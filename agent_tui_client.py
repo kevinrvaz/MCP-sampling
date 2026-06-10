@@ -305,7 +305,7 @@ Screen { layout: vertical; }
 #left {
     width: 40%;
     layout: vertical;
-    border-right: solid $panel-lighten-2;
+    border: solid $panel-lighten-2;
 }
 
 #chat-log {
@@ -340,9 +340,20 @@ Screen { layout: vertical; }
 }
 
 /* Right side: 2 rows × 2 cols of JSON-RPC panels */
-#right      { width: 60%; layout: vertical; }
-#right-top  { layout: horizontal; height: 1fr; border-bottom: solid $panel-lighten-2; }
-#right-bottom { layout: horizontal; height: 1fr; }
+#right          { width: 60%; layout: vertical; border: solid $panel-lighten-2; }
+#client-section { layout: vertical; height: 1fr; border-bottom: solid $panel-lighten-2; }
+#server-section { layout: vertical; height: 1fr; }
+#right-top      { layout: horizontal; height: 1fr; }
+#right-bottom   { layout: horizontal; height: 1fr; }
+
+.group-heading {
+    height: 1;
+    background: $primary-darken-3;
+    color: $text-muted;
+    padding: 0 1;
+    text-style: bold italic;
+    text-align: center;
+}
 
 /* Individual panels */
 .rpc-panel       { layout: vertical; width: 1fr; }
@@ -419,20 +430,24 @@ class MCPSamplingTUI(App[None]):
             with Vertical(id="right"):
                 yield Label("MCP JSON-RPC Inspector", classes="section-heading")
                 yield FlowDiagram(id="flow-diagram")
-                with Horizontal(id="right-top"):
-                    with Vertical(classes="rpc-panel-left"):
-                        yield Label(" ↑ Client Sends", classes="panel-title")
-                        yield VerticalScroll(id="client-send-log", classes="rpc-scroll")
-                    with Vertical(classes="rpc-panel"):
-                        yield Label(" ↓ Client Receives", classes="panel-title")
-                        yield VerticalScroll(id="client-recv-log", classes="rpc-scroll")
-                with Horizontal(id="right-bottom"):
-                    with Vertical(classes="rpc-panel-left"):
-                        yield Label(" ↓ Server Receives", classes="panel-title")
-                        yield VerticalScroll(id="server-recv-log", classes="rpc-scroll")
-                    with Vertical(classes="rpc-panel"):
-                        yield Label(" ↑ Server Sends", classes="panel-title")
-                        yield VerticalScroll(id="server-send-log", classes="rpc-scroll")
+                with Vertical(id="client-section"):
+                    yield Label("MCP Client", classes="group-heading")
+                    with Horizontal(id="right-top"):
+                        with Vertical(classes="rpc-panel-left"):
+                            yield Label(" ↑ Client Sends", classes="panel-title")
+                            yield VerticalScroll(id="client-send-log", classes="rpc-scroll")
+                        with Vertical(classes="rpc-panel"):
+                            yield Label(" ↓ Client Receives", classes="panel-title")
+                            yield VerticalScroll(id="client-recv-log", classes="rpc-scroll")
+                with Vertical(id="server-section"):
+                    yield Label("MCP Server", classes="group-heading")
+                    with Horizontal(id="right-bottom"):
+                        with Vertical(classes="rpc-panel-left"):
+                            yield Label(" ↓ Server Receives", classes="panel-title")
+                            yield VerticalScroll(id="server-recv-log", classes="rpc-scroll")
+                        with Vertical(classes="rpc-panel"):
+                            yield Label(" ↑ Server Sends", classes="panel-title")
+                            yield VerticalScroll(id="server-send-log", classes="rpc-scroll")
         yield Footer()
 
     def on_mount(self) -> None:

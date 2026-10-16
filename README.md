@@ -2,6 +2,8 @@
 
 A terminal UI for exploring **MCP (Model Context Protocol) sampling** — watch JSON-RPC messages flow between a host, MCP client, and MCP server in real time while chatting with an agent.
 
+conference talk link - https://www.youtube.com/watch?v=Pq0_MdLZKUU
+
 ## What it does
 
 - **Left panel** — chat window: send queries, approve/deny sampling requests, and see formatted agent responses with markdown rendering

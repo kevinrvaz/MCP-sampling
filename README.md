@@ -6,7 +6,7 @@ conference talk link - https://www.youtube.com/watch?v=Pq0_MdLZKUU
 
 <br/>
 
-[![Beyond Tools and Resources: A Deep Dive into MCP Sampling for Agentic Features - Kevin Vaz](https://i.ytimg.com/vi/Pq0_MdLZKUU/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBXaLRWDVqoZ9olDu_mQGRWY8JvzA&usqp=CBQ)](https://www.youtube.com/embed/Pq0_MdLZKUU)
+[![Beyond Tools and Resources: A Deep Dive into MCP Sampling for Agentic Features - Kevin Vaz](https://i.ytimg.com/vi/Pq0_MdLZKUU/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBXaLRWDVqoZ9olDu_mQGRWY8JvzA&usqp=CBQ)](https://www.youtube.com/watch?v=Pq0_MdLZKUU)
 
 
 ## What it does
